@@ -3,66 +3,90 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 60px; /* Место для footer */
 }
 
 header {
     background: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 0.5rem 0; /* Уменьшил отступы */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
+    margin: 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 10px; /* Уменьшил отступы */
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 14px; /* Уменьшил шрифт */
 }
 
 main {
-    padding: 2rem;
+    padding: 1rem; /* Уменьшил отступы */
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 0.5rem 0; /* Уменьшил отступы */
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 40px; /* Фиксированная высота */
 }
 
 .service {
     border: 1px solid #ccc;
-    padding: 1rem;
-    margin: 1rem auto;
-    width: 60%;
+    padding: 0.8rem; /* Уменьшил отступы */
+    margin: 0.8rem auto; /* Уменьшил отступы */
+    width: 80%;
 }
 
 button, input[type="submit"] {
     background-color: #4CAF50;
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Уменьшил кнопки */
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px; /* Уменьшил шрифт */
     margin: 4px 2px;
     cursor: pointer;
 }
 
 input[type="text"], input[type="email"], textarea {
-    width: 300px;
-    padding: 8px;
+    width: 250px; /* Уменьшил поля ввода */
+    padding: 6px; /* Уменьшил отступы */
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 24px; /* Уменьшил заголовок */
+    margin: 0.5rem 0;
+}
+
+p {
+    font-size: 14px; /* Уменьшил основной текст */
+    margin: 0.5rem 0;
+}
+
+img {
+    max-width: 400px; /* Уменьшил изображение */
+    height: auto;
 }
