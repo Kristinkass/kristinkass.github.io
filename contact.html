@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакты - Галактика</title>
+    <title>Контакты - Мир Природы</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,33 +12,49 @@
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="about.html">О нас</a></li>
-                <li><a href="services.html">Услуги</a></li>
-                <li><a href="ocean.html">Океан</a></li> <!-- Новая ссылка -->
+                <li><a href="aquatic.html">Подводный мир</a></li>
+                <li><a href="terrestrial.html">Животные суши</a></li>
+                <li><a href="birds.html">Птицы</a></li>
                 <li><a href="contact.html">Контакты</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Свяжитесь с нами</h1>
-        <p>Готовы отправиться в путешествие? Заполните форму ниже!</p>
+        <p>Есть вопросы о животном мире? Хотите сотрудничать? Заполните форму ниже!</p>
+        
         <form id="contactForm">
             <label for="name">Ваше имя:</label><br>
             <input type="text" id="name" name="name" required><br><br>
 
             <label for="email">Ваш Email:</label><br>
             <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="interest">Интересует:</label><br>
+            <select id="interest" name="interest">
+                <option value="aquatic">Подводный мир</option>
+                <option value="terrestrial">Животные суши</option>
+                <option value="birds">Птицы</option>
+                <option value="other">Другое</option>
+            </select><br><br>
 
             <label for="message">Сообщение:</label><br>
             <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
 
-            <input type="submit" value="Отправить в космос!">
+            <input type="submit" value="Отправить">
         </form>
+        
         <div id="formMessage" style="display:none; margin-top: 20px; padding: 10px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;">
-            Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами скоро!
+            Спасибо! Ваше сообщение отправлено в галактику! она вас услышит!
+        </div>
+        
+        <div class="contact-info">
+            <h2>Другие способы связи</h2>
+            <p>Email: info@mirprirody.ru</p>
         </div>
     </main>
     <footer>
-        <p>&copy; 2023 Галактика. Все права защищены.</p>
+        <p>&copy; 2025 Мир Природы. Все права защищены.</p>
     </footer>
     <script src="script.js"></script>
 </body>
