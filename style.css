@@ -3,15 +3,15 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    min-height: 100vh;
-    position: relative;
-    padding-bottom: 60px; /* Место для footer */
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 header {
-    background: #333;
+    background: #2c3e50;
     color: #fff;
-    padding: 0.5rem 0; /* Уменьшил отступы */
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
@@ -23,70 +23,175 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px; /* Уменьшил отступы */
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 14px; /* Уменьшил шрифт */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
 }
 
 main {
-    padding: 1rem; /* Уменьшил отступы */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: calc(100vh - 140px);
+}
+
+footer {
+    background: #2c3e50;
+    color: #fff;
     text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+}
+
+.ecosystems {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.ecosystem-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem;
+    width: 250px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ecosystem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.animal-category {
+    margin: 2rem 0;
+}
+
+.animal-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.animal-card:hover {
+    background-color: #e8f4fc;
+}
+
+.animal-card h3 a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.animal-card h3 a:hover {
+    color: #3498db;
+}
+
+.animal-detail {
     max-width: 800px;
     margin: 0 auto;
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 0.5rem 0; /* Уменьшил отступы */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 40px; /* Фиксированная высота */
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
 }
 
-.service {
-    border: 1px solid #ccc;
-    padding: 0.8rem; /* Уменьшил отступы */
-    margin: 0.8rem auto; /* Уменьшил отступы */
-    width: 80%;
+.team-member {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 200px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.facts {
+    background-color: #e8f4fc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
 }
 
 button, input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #3498db;
     border: none;
     color: white;
-    padding: 8px 16px; /* Уменьшил кнопки */
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px; /* Уменьшил шрифт */
+    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-input[type="text"], input[type="email"], textarea {
-    width: 250px; /* Уменьшил поля ввода */
-    padding: 6px; /* Уменьшил отступы */
-    font-size: 14px;
+button:hover, input[type="submit"]:hover {
+    background-color: #2980b9;
 }
 
-h1 {
-    font-size: 24px; /* Уменьшил заголовок */
-    margin: 0.5rem 0;
+input[type="text"], input[type="email"], textarea, select {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-p {
-    font-size: 14px; /* Уменьшил основной текст */
-    margin: 0.5rem 0;
+.contact-info {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
 }
 
-img {
-    max-width: 400px; /* Уменьшил изображение */
-    height: auto;
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .ecosystems {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ecosystem-card {
+        width: 80%;
+    }
 }
